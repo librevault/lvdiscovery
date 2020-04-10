@@ -67,7 +67,7 @@ async def setup():
 
 @app.middleware("http")
 async def add_process_time_header(request: Request, call_next):
-    REQUESTS_BY_CLIENT.labels(ua=request.headers["User-Agent"])
+    REQUESTS_BY_CLIENT.labels(ua=request.headers["User-Agent"]).inc()
     response = await call_next(request)
     return response
 

@@ -14,7 +14,7 @@ from starlette_exporter import PrometheusMiddleware, handle_metrics
 # Config
 config = Config(".env")
 REDIS_URL = config("REDIS_URL", cast=str)
-ANNOUNCE_TTL = config("ANNOUNCE_TTL", cast=int, default=15)
+ANNOUNCE_TTL = config("ANNOUNCE_TTL", cast=int, default=100)
 PEER_LIMIT = config("PEER_LIMIT", cast=int, default=50)
 
 logger = logging.getLogger(__name__)
@@ -55,9 +55,9 @@ class AnnounceResponse(BaseModel):
     peers: List[Peer]
 
 
-# class Deannounce(BaseModel):
-#     community_id: str
-#     peer_id: str
+class Deannounce(BaseModel):
+    community_id: str
+    peer_id: str
 
 
 @app.on_event("startup")
@@ -107,3 +107,15 @@ async def announce(ann: Announce, request: Request):
         UNIQUE_COMMUNITIES.set(await app.redis_pool.scard(stat_unique_communities))
 
     return resp
+
+
+@app.post("/v1/deannounce")
+async def deannounce(ann: Deannounce):
+    community_id = bytes.fromhex(ann.community_id).hex()
+    peer_id = bytes.fromhex(ann.peer_id).hex()
+
+    peer_prefix = f"{community_prefix}{community_id}:"
+    peer_key = f"{peer_prefix}{peer_id}"
+    await app.redis_pool.delete(peer_key)
+
+    return {}

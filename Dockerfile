@@ -12,4 +12,4 @@ RUN apk add --virtual .build-deps build-base libffi-dev libressl-dev \
 COPY . ./
 
 EXPOSE 8080
-CMD .venv/bin/gunicorn -k uvicorn.workers.UvicornWorker services.tracker:app -b "[::]:8080"
+CMD .venv/bin/hypercorn -b "[::]:8080" services.tracker:app

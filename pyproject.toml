@@ -20,7 +20,7 @@ exclude = '''
 '''
 
 [tool.poetry]
-name = "librevault-api-backend"
+name = "lvdiscovery"
 version = "0.1.0"
 description = ""
 authors = ["Alexander Shishenko <alex@shishenko.com>"]

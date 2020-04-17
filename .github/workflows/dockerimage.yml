@@ -14,10 +14,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag docker.pkg.github.com/librevault/lvdiscovery/lvdiscovery:$(date +%s) --tag docker.pkg.github.com/librevault/lvdiscovery/lvdiscovery:latest
-    - name: Build, Tag, Push
-      uses: mattdavis0351/actions/docker-gpr@v1
+    - name: Publish Docker Image to GPR
+      uses: machine-learning-apps/gpr-docker-publish@master
+      id: docker
       with:
-        repo-token: ${{ secrets.GITHUB_TOKEN }}
-        image-name: lvdiscovery
+        image_name: 'lvdiscovery'
+        cache: true
+        branch_tag: true
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

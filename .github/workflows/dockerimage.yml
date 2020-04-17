@@ -19,7 +19,7 @@ jobs:
     - name: Publish to Registry
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
-        name: myDocker/repository
+        name: docker.pkg.github.com/librevault/lvdiscovery
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
         tags: docker.pkg.github.com/librevault/lvdiscovery/lvdiscovery:latest 

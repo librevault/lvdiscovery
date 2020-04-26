@@ -174,7 +174,7 @@ description = "A ASGI Server based on Hyper libraries and inspired by Gunicorn."
 name = "hypercorn"
 optional = false
 python-versions = ">=3.7"
-version = "0.9.4"
+version = "0.9.5"
 
 [package.dependencies]
 h11 = "*"
@@ -398,7 +398,7 @@ version = "0.15.0"
 h11 = ">=0.8.1"
 
 [metadata]
-content-hash = "e4fbc0694fa62dfc80d779ca3ce02766c3ee4505bc40626b92bb0fe48dbd812d"
+content-hash = "eb98a9116b74b401bdc8ef233e5a7aa66ed735bf8b76fa0edd471e7ac74d781c"
 python-versions = "^3.8"
 
 [metadata.files]
@@ -504,8 +504,8 @@ hpack = [
     {file = "hpack-3.0.0.tar.gz", hash = "sha256:8eec9c1f4bfae3408a3f30500261f7e6a65912dc138526ea054f9ad98892e9d2"},
 ]
 hypercorn = [
-    {file = "Hypercorn-0.9.4-py3-none-any.whl", hash = "sha256:940cc9492a24413937bfa910a1580bbff69db51c5bf771e722b89848a54c5786"},
-    {file = "Hypercorn-0.9.4.tar.gz", hash = "sha256:35bec0a3b07ec1f77b712763e8ecf307814b17a67607600bbf5d44174b8d9aaa"},
+    {file = "Hypercorn-0.9.5-py3-none-any.whl", hash = "sha256:c53eb444d05e40ac1aacecaa6d3a8fabada90bbea8aacf617e75d41ac065c310"},
+    {file = "Hypercorn-0.9.5.tar.gz", hash = "sha256:d94fa535e238ce1cd9c9b5f4cb77cb785d53069a5dc57a017e7c2fc51104ad5e"},
 ]
 hyperframe = [
     {file = "hyperframe-5.2.0-py2.py3-none-any.whl", hash = "sha256:5187962cb16dcc078f23cb5a4b110098d546c3f41ff2d4038a9896893bbd0b40"},

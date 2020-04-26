@@ -338,7 +338,7 @@ description = "Prometheus metrics exporter for Starlette applications."
 name = "starlette-exporter"
 optional = false
 python-versions = "*"
-version = "0.2.0"
+version = "0.3.0"
 
 [package.dependencies]
 prometheus-client = "*"
@@ -398,7 +398,7 @@ version = "0.15.0"
 h11 = ">=0.8.1"
 
 [metadata]
-content-hash = "30d05ea42b4c7d4a498b7fe5bef111820ddf27a320654b0c5aee52d82763a7c6"
+content-hash = "c73e2cd23325f8724beba8881f8bc2d893d4acef083f90bd2dc8269149454508"
 python-versions = "^3.8"
 
 [metadata.files]
@@ -606,8 +606,8 @@ starlette = [
     {file = "starlette-0.13.2.tar.gz", hash = "sha256:a9bb130fa7aa736eda8a814b6ceb85ccf7a209ed53843d0d61e246b380afa10f"},
 ]
 starlette-exporter = [
-    {file = "starlette_exporter-0.2.0-py3-none-any.whl", hash = "sha256:2fc999d986e820e97e5e86208479ff7da820eaf7ea78513bac8255c8bab175a1"},
-    {file = "starlette_exporter-0.2.0.tar.gz", hash = "sha256:f5862cddba1591b2b0ec1c33e4237bf4b34383632c402c60e7752cb55d509c8e"},
+    {file = "starlette_exporter-0.3.0-py3-none-any.whl", hash = "sha256:c602fd95af422d9d96e2d1e1b8fb595b36c183e6c9fae82088324498c7165f28"},
+    {file = "starlette_exporter-0.3.0.tar.gz", hash = "sha256:4da9726eac1c9a19efb7fda19d550c3e9e77e7898a9097e40d926d521e74cec5"},
 ]
 toml = [
     {file = "toml-0.10.0-py2.7.egg", hash = "sha256:f1db651f9657708513243e61e6cc67d101a39bad662eaa9b5546f789338e07a3"},

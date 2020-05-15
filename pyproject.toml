@@ -33,7 +33,7 @@ black = "19.10b0"
 flake8 = "3.8.1"
 starlette-exporter = "^0.3.0"
 hypercorn = "^0.9.5"
-toml = "^0.10.0"
+toml = "^0.10.1"
 
 [tool.poetry.dev-dependencies]
 pre-commit = "^2.4.0"

@@ -36,7 +36,7 @@ hypercorn = "^0.9.5"
 toml = "^0.10.1"
 
 [tool.poetry.dev-dependencies]
-pre-commit = "^2.4.0"
+pre-commit = "^2.5.0"
 
 [build-system]
 requires = ["poetry>=0.12"]

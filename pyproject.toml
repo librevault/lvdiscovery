@@ -32,7 +32,7 @@ fastapi = "^0.55.1"
 black = "19.10b0"
 flake8 = "3.8.3"
 starlette-exporter = "^0.4.0"
-hypercorn = "^0.10.1"
+hypercorn = "^0.11.2"
 toml = "^0.10.1"
 
 [tool.poetry.dev-dependencies]
